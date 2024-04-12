@@ -40,9 +40,6 @@ return {
           vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
           vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
           vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-          vim.keymap.set("n", "<leader>f", function()
-            vim.lsp.buf.format { async = true }
-          end, opts)
           vim.api.nvim_set_keymap("i", "<C-Space>", "<C-x><C-o>", {noremap = true, silent = true})
         end,
       })
