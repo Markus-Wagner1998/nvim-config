@@ -10,3 +10,4 @@ vim.api.nvim_set_keymap('n', '<Leader>v', ':vsplit<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Leader>s', ':split<cr>', {noremap = true})
 
 vim.wo.number = true
+vim.wo.relativenumber = true
