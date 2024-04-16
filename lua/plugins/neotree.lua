@@ -14,6 +14,11 @@ return {
         mappings = {
           ["P"] = { "toggle_preview" },
         }
+      },
+      filesystem = {
+        filtered_items = {
+          visible = true,switchRole
+        }
       }
     })
   end
