@@ -51,6 +51,11 @@ return {
           vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
           vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
           vim.api.nvim_set_keymap("i", "<C-Space>", "<C-x><C-o>", {noremap = true, silent = true})
+
+          local builtin = require("telescope.builtin")
+          vim.keymap.set("n", "<leader>gr", builtin.lsp_references, opts);
+          vim.keymap.set("n", "<leader>gd", builtin.lsp_definitions, opts);
+          vim.keymap.set("n", "<leader>gi", builtin.lsp_implementations, opts);
         end,
       })
     end
