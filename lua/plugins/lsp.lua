@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "jdtls", "lua_ls", "terraformls", "tsserver" }
+        ensure_installed = { "jdtls", "lua_ls", "terraformls", "tsserver", "gopls" }
       })
     end
   },
@@ -28,6 +28,12 @@ return {
         capabilities = capabilities
       });
       lspconfig.jsonls.setup({
+        capabilities = capabilities
+      });
+      lspconfig.terraformls.setup({
+        capabilities = capabilities
+      });
+      lspconfig.gopls.setup({
         capabilities = capabilities
       });
       vim.api.nvim_create_autocmd("LspAttach", {
@@ -50,7 +56,7 @@ return {
           vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
           vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
           vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-          vim.api.nvim_set_keymap("i", "<C-Space>", "<C-x><C-o>", {noremap = true, silent = true})
+          vim.api.nvim_set_keymap("i", "<C-Space>", "<C-x><C-o>", { noremap = true, silent = true })
 
           local builtin = require("telescope.builtin")
           vim.keymap.set("n", "<leader>gr", builtin.lsp_references, opts);
