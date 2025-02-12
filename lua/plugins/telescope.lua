@@ -6,7 +6,7 @@ return {
     config = function()
       local builtin = require("telescope.builtin")
       vim.keymap.set("n", "<C-p>", builtin.find_files, {})
-      vim.keymap.set("n", "<leader>p", builtin.find_files, {})
+      -- vim.keymap.set("n", "<leader>p", builtin.find_files, {})
       vim.keymap.set("n", "<leader>ap", ":Telescope find_files no_ignore=true<cr>", {})
       vim.keymap.set("v", "<leader>p", '"zy:Telescope find_files search_file=<C-r>z<cr>', {})
       vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
