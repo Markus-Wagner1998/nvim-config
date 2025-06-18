@@ -12,6 +12,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
+vim.filetype.add({
+  pattern = {
+    ['docker%-compose.*%.ya?ml'] = 'yaml.docker-compose',
+  },
+})
+
 
 require("vim-options")
 require("lazy").setup("plugins")
