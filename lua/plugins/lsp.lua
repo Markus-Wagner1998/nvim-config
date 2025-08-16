@@ -15,7 +15,7 @@ return {
                     "terraformls",
                     "ts_ls",
                     "dockerls",
-                    "docker_compose_language_server",
+                    "docker_compose_language_service",
                     "gh_actions_ls",
                     "bashls"
                 }
@@ -45,7 +45,7 @@ return {
             lspconfig.dockerls.setup({
                 capabilities = capabilities
             });
-            lspconfig.docker_compose_language_server.setup({
+            lspconfig.docker_compose_language_service.setup({
                 capabilities = capabilities,
             });
             lspconfig.gh_actions_ls.setup({
