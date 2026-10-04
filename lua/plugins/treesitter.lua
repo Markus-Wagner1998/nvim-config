@@ -4,7 +4,17 @@ return {
 	config = function()
 		local config = require("nvim-treesitter.configs")
 		config.setup({
-			ensure_installed = { "bash", "lua", "java", "javascript", "json", "jq", "terraform", "typescript", "yaml" },
+			ensure_installed = {
+				"bash",
+				"lua",
+				"java",
+				"javascript",
+				"json",
+				"jq",
+				"terraform",
+				"typescript",
+				"yaml",
+			},
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
